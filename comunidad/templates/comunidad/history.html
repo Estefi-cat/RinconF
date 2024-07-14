@@ -1,0 +1,24 @@
+{%extends "core/base.html"%}
+<!--{%block title%}<h2>Comunidad</h2> {%endblock%}-->
+{%load static%}
+{%block content%}
+<!--{{projects}}-->
+{%for project in projects %}
+<main class="contenido">
+    <div class="tiposDeFlores">
+        <section>
+        <h2 id="articulo1">Flores En Comunidad</h2>
+        <br>
+        <p>{{project.title}}</p>
+        <br>
+        <img src="{{project.image.url}}"" alt="flor de leyenda" width="80%">
+        <p>{{project.description}}</p>
+        <br><br>
+        <!--{%if project.link%} 
+18	    <p><a href= "{{project.link}}" target="_blank">Mas Leyendas</a></p>
+19	    {%endif%}-->
+        </section>
+    </div>
+</main>    
+{%endfor%}
+{%endblock%}

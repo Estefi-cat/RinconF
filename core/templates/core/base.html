@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista de flores</title>
+    <!--Estilos-->
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/styles/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'core/imagenes/favicon.png' %}" type="image/x-icon">
+</head>
+<body>
+    
+    <header class="titulo">
+        <h1>Rincon Floreciente</h1>
+        <!--{%block title%} {%endblock%}-->
+    </header>
+
+    <div class="conteiner">
+
+        <header class="header">
+            <div class="logo">
+                <img src="{% static 'core/imagenes/logo.jpg' %}" alt="logo de la pagina">
+            </div>
+            <!--Barra de navegacion-->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}">Página principal</a></li>
+                    <li><a href="{% url 'flowers' %}">Flores</a></li>
+                    <li><a href="{% url 'history' %}">Comunidad</a></li>
+                    <li><a href="{% url 'contact' %}">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+ <!--Contenido-->
+    {%block content%}  
+    {%endblock%}
+        <!-- Hasta acá llega el elemento que es diferente. Luego lo de abajo se mantiene igual en todas las páginas -->
+
+        <footer class="footer">
+            <p>&copy; Todos los derechos reservados | 2024</p>
+        </footer>
+    </div>
+</body>
+</html>
+
